@@ -1,0 +1,12 @@
+<div class="row" ng-repeat="comment in comments">
+    <div class="col s6" class = "row">
+        <div class="well">
+          <h4>{{ comment.firstName.lastName }}</h4>
+          <p> {{ comment.testimonial }}</p>
+          <span data-id="{{comment._id}}"></span>
+        </div>
+    </div>
+</div>
+<!-- <div>
+    <ng-view></ng-view>
+</div> -->

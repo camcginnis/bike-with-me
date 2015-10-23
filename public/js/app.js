@@ -1,4 +1,4 @@
-angular.module("bikeWithMe", ['ngRoute']);
+var app = angular.module("bikeWithMe", ['ngRoute']);
 
 angular.module("bikeWithMe")
     .config(function($routeProvider){

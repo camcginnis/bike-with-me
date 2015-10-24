@@ -2,6 +2,18 @@ var express = require("express");
 var server = express();
 var mongoose = require("mongoose");
 var bodyParser = require("body-parser");
+var Schema = mongoose.Schema;
+
+var commentSchema = new Schema({
+    firstName: String,
+    lastName: String,
+    testimonial: String
+});
+
+var Comment = mongoose.model("Comment", commentSchema);
+
+//connect to a database
+mongoose.connect("mongodb://localhost/forumdatabase");
 
 server.use("/", express.static(__dirname+"/public"));
 server.use(bodyParser.json());
@@ -12,7 +24,7 @@ server.get("/", function(req, res){
 });
 
 //get forum
-server.get("/api/forum", function(req, res){
+server.get("/api/comments", function(req, res){
   var comments = Comment.find({}, function(err, comments){
       if(err){
         console.log(err);
@@ -22,12 +34,12 @@ server.get("/api/forum", function(req, res){
   })
 });
 
-server.post("/api/forum", function(req, res){
+server.post("/api/comments", function(req, res){
     var comment = new Comment({
       firstName: req.body.firstName,
       lastName: req.body.lastName,
       testimonial: req.body.testimonial
-    })
+    });
 
     comment.save(function(err){
         if(err){
@@ -38,21 +50,12 @@ server.post("/api/forum", function(req, res){
     });
 });
 
-server.get("/api/forum/:id", function(req, res){
+server.get("/api/comments/:id", function(req, res){
     Comment.find({_id: req.params.id}, function(err, todo){
       if(err){
         console.log(err);
       }
       res.json(comment);
-    });
-});
-
-server.delete("/api/forum/:id", function(req, res){
-    Comment.findByIdAndRemove(req.params.id, function(err){
-        if(err){
-          console.log
-        }
-        res.json({message: "Successfully deleted comment"});
     });
 });
 

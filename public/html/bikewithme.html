@@ -1,9 +1,11 @@
+<div class="image" src="public/images/Bike Wheel.png"></div>
+
 <div class="row" ng-repeat="comment in comments">
     <div class="col s6" class = "row">
         <div class="well">
-          <h4>{{ comment.firstName.lastName }}</h4>
+          <h4>{{ comment.firstName, comment.lastName }}</h4>
           <p> {{ comment.testimonial }}</p>
-          <span data-id="{{comment._id}}"></span>
+          <span data-id="{{comments}}"></span>
         </div>
     </div>
 </div>

@@ -1,23 +1,12 @@
 angular.module("bikeWithMe")
     .controller("BikeWithMeController", function($scope, $http){
-    $scope.create = [];
+    $scope.comments = {};
 
     var getComment = function(){
-      $http.get("/api/forum")
+      $http.get("/api/comments")
         .then(function(response){
           $scope.comments = response.data;
         });
         };
 
-
-    // getComments();
-//
-    // $scope.deleteComment = function(id){
-    //     var url = "/api/forum"+id;
-    //
-    //     $http.delete(url)
-    //       .then(function(response){
-    //         getComments();
-    //       });
-    // };
 });

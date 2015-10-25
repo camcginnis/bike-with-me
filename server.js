@@ -2,15 +2,7 @@ var express = require("express");
 var server = express();
 var mongoose = require("mongoose");
 var bodyParser = require("body-parser");
-var Schema = mongoose.Schema;
 
-var commentSchema = new Schema({
-    firstName: String,
-    lastName: String,
-    testimonial: String
-});
-
-var Comment = mongoose.model("Comment", commentSchema);
 
 //connect to a database
 mongoose.connect("mongodb://localhost/forumdatabase");

@@ -1,8 +1,8 @@
 var express = require("express");
 var server = express();
+var Comment = require("./models/Comment");
 var mongoose = require("mongoose");
 var bodyParser = require("body-parser");
-
 
 //connect to a database
 mongoose.connect("mongodb://localhost/forumdatabase");

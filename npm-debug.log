@@ -27,22 +27,22 @@
 16 verbose addNameRange registry:https://registry.npmjs.org/nodemon not in flight; fetching
 17 verbose request uri https://registry.npmjs.org/nodemon
 18 verbose request no auth needed
-19 info attempt registry request try #1 at 4:51:14 PM
-20 verbose request id 4e52c8a1542325ec
+19 info attempt registry request try #1 at 5:29:53 PM
+20 verbose request id 8ac818ae067fe6fd
 21 verbose etag "8D1669QR3GKLUNNBH16LHWXE7"
 22 http request GET https://registry.npmjs.org/nodemon
 23 http 304 https://registry.npmjs.org/nodemon
 24 silly get cb [ 304,
-24 silly get   { date: 'Sun, 25 Oct 2015 20:51:15 GMT',
+24 silly get   { date: 'Sun, 25 Oct 2015 21:29:54 GMT',
 24 silly get     via: '1.1 varnish',
 24 silly get     'cache-control': 'max-age=60',
 24 silly get     etag: '"8D1669QR3GKLUNNBH16LHWXE7"',
-24 silly get     age: '34',
+24 silly get     age: '0',
 24 silly get     connection: 'keep-alive',
-24 silly get     'x-served-by': 'cache-iad2137-IAD',
+24 silly get     'x-served-by': 'cache-iad2133-IAD',
 24 silly get     'x-cache': 'HIT',
 24 silly get     'x-cache-hits': '1',
-24 silly get     'x-timer': 'S1445806275.663332,VS0,VE1',
+24 silly get     'x-timer': 'S1445808594.263433,VS0,VE91',
 24 silly get     vary: 'Accept' } ]
 25 verbose etag https://registry.npmjs.org/nodemon from cache
 26 verbose get saving nodemon to /Users/Chad/.npm/registry.npmjs.org/nodemon/.cache.json

@@ -1,6 +1,6 @@
 var express = require("express");
 var server = express();
-var Comment = require("./models/Comment");
+var Comment = require("./models/comments.js");
 var mongoose = require("mongoose");
 var bodyParser = require("body-parser");
 
@@ -23,7 +23,7 @@ server.get("/api/comments", function(req, res){
       }
 
       res.json(comments);
-  })
+  });
 });
 
 server.post("/api/comments", function(req, res){

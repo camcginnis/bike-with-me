@@ -8,5 +8,5 @@ angular.module("bikeWithMe")
           $scope.comments = response.data;
         });
         };
-
+        getComment();
 });

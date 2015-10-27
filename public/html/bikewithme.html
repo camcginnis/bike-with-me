@@ -1,11 +1,26 @@
-<div class="image" src="../../images/Bike_Wheel.png"></div>
+<!-- <div class="image" src="../../images/Bike_Wheel.png"></div>
 
-<div class="row" ng-repeat="comment in comments">
+<div class="card" ng-repeat="comment in comments">
     <div class="col s6" class = "row">
         <div class="well">
-          <h4>{{ comment.firstName, comment.lastName }}</h4>
+          <h4>{{ comment.firstName}} {{ comment.lastInitial }}</h4>
           <p> {{ comment.testimonial }}</p>
           <span data-id="{{comments}}"></span>
         </div>
+    </div>
+</div> -->
+
+<div class="card">
+  <div class="card large">
+      <div class="card-image waves-effect waves-block waves-light">
+        <img class="activator" src="../../images/lane.jpg">
+      </div>
+      <div class="card-content">
+        <span class="card-title activator grey-text text-darken-4">Stories<i class="material-icons right">more_vert</i></span>
+      </div>
+      <div class="card-reveal">
+        <span class="card-title grey-text text-darken-4">Stories<i class="material-icons right">close</i></span>
+        <p>Here is some more information about this product that is only revealed once clicked on.</p>
+      </div>
     </div>
 </div>

@@ -6,8 +6,8 @@
           <label for="first_name">First Name</label>
         </div>
         <div class="input-field col s6">
-          <input id="last_name" type="text" class="validate" ng-model="formData.lastName">
-          <label for="last_name">Last Name</label>
+          <input id="last_name" type="text" class="validate" ng-model="formData.lastInitial">
+          <label for="last_name">Last Initial</label>
         </div>
       </div>
 
@@ -20,5 +20,17 @@
       <button class="btn waves-effect waves-light blue" type="submit" name="action">Submit
       </button>
     </form>
+</div>
 
+
+<div class="card" ng-repeat="comment in comments">
+  <div class="row">
+      <div class="col s6" class = "row">
+          <div class="well">
+            <h4>{{ comment.firstName}} {{ comment.lastInitial }}</h4>
+            <p> {{ comment.testimonial }}</p>
+            <span data-id="{{comments}}"></span>
+          </div>
+      </div>
+  </div>    
 </div>

@@ -7,7 +7,7 @@ var bodyParser = require("body-parser");
 //connect to a database
 mongoose.connect("mongodb://localhost/forumdatabase");
 
-server.use("/", express.static(__dirname+"/public"));
+server.use(express.static(__dirname+"/public"));
 server.use(bodyParser.json());
 server.use(bodyParser.urlencoded({ extended: true }));
 
@@ -29,7 +29,7 @@ server.get("/api/comments", function(req, res){
 server.post("/api/comments", function(req, res){
     var comment = new Comment({
       firstName: req.body.firstName,
-      lastName: req.body.lastName,
+      lastInitial: req.body.lastInitial,
       testimonial: req.body.testimonial
     });
 

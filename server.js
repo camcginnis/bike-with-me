@@ -51,5 +51,15 @@ server.get("/api/comments/:id", function(req, res){
     });
 });
 
+server.delete("/api/comments/:id", function(req, res){
+   User.findByIdAndRemove(req.params.id, function(err){
+        if(err){
+            console.log(err);
+        }
+       res.json({message: "Comment successfully removed"});
+
+   });
+});
+
 server.listen(3030);
     console.log("You're handsome");

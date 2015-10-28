@@ -37,8 +37,11 @@ angular.module("bikeWithMe").factory('comments', function($http) {
       //This is to delete a specific comment based on an id
       //@params --> id
       //@return
-      service.delete = function(id){};
+      service.delete = function(id){
+        var url = baseUrl+"/"+id;
+        return $http.delete(url);
 
+        };
 
       return service;
 

@@ -9,10 +9,8 @@ angular.module("bikeWithMe")
                     });
         };
 
-        $scope.test = function(){
-          comments.getRandom()
-                  .then(function(response){
-                    console.log(response);
-                  });
-        };
-  });
+        comments.getAll()
+                .then(function(response){
+                  $scope.comments = response.data;
+        });
+});

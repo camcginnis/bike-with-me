@@ -20,7 +20,7 @@
       </div>
       <div class="card-reveal">
         <span class="card-title grey-text text-darken-4">Stories<i class="material-icons right">close</i></span>
-        <p>{{Random Comments Posted Here!!!!}}.</p>
+        <p ng-repeat="comment in comments">{{comment.firstName}}</p>
       </div>
     </div>
 </div>

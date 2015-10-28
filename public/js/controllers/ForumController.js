@@ -1,14 +1,18 @@
 angular.module("bikeWithMe")
-    .controller("ForumController", function($scope, $http){
+    .controller("ForumController", function($scope, comments){
         $scope.formData = {};
 
         $scope.createComment = function(){
-          $scope.formData.completed = false;
-            var url="/api/comments";
-              $http.post("/api/comments", $scope.formData)
-              .then(function(response){
-                $scope.formData = {};
-              });
+            comments.create($scope.formData)
+                    .then(function(response){
+                      $scope.formData = {};
+                    });
+        };
 
-    };
+        $scope.test = function(){
+          comments.getRandom()
+                  .then(function(response){
+                    console.log(response);
+                  });
+        };
   });

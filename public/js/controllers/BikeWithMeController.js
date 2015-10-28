@@ -1,12 +1,13 @@
 angular.module("bikeWithMe")
-    .controller("BikeWithMeController", function($scope, $http){
-    $scope.comments = {};
+    .controller("BikeWithMeController", function($scope, comments){
+      $scope.comments = [];
 
-    var getComment = function(){
-      $http.get("/api/comments")
-        .then(function(response){
-          $scope.comments = response.data;
-        });
-        };
-        getComment();
+      comments.getAll()
+              .then(function(response){
+                $scope.comments = response.data;
+              });
+
+
+
+
 });

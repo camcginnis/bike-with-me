@@ -23,14 +23,17 @@
 </div>
 
 
-<!-- <div class="card" ng-repeat="comment in comments">
-  <div class="row">
-      <div class="col s6" class = "row">
-          <div class="well">
-            <h4>{{ comment.firstName}} {{ comment.lastInitial }}</h4>
-            <p> {{ comment.testimonial }}</p>
-            <span data-id="{{comments}}"></span>
+<div class = "container" class="right" ng-repeat="comment in comments">
+      <div class="col s12 m6">
+          <div class="card grey lighten-1">
+                <div class="card-content white-text">
+                  <div class="message">
+                    <h5>{{ comment.firstName}} {{ comment.lastInitial }}</h5>
+                    <p> {{ comment.testimonial }}</p>
+                    <span data-id="{{comments}}"></span>
+                  </div>
+                </div>
+              <button type="button" name="remove" ng-click="removeComment">Gone</button>
           </div>
       </div>
-  </div>
-</div> -->
+</div>

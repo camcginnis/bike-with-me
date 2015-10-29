@@ -13,4 +13,12 @@ angular.module("bikeWithMe")
                 .then(function(response){
                   $scope.comments = response.data;
         });
+
+        $scope.removeComment = function(){
+            comments.delete($scope.formData)
+                .then(function(response){
+                  console.log(response);
+                });
+        };
+
 });

@@ -52,7 +52,7 @@ server.get("/api/comments/:id", function(req, res){
 });
 
 server.delete("/api/comments/:id", function(req, res){
-   User.findByIdAndRemove(req.params.id, function(err){
+   Comment.findByIdAndRemove(req.params.id, function(err){
         if(err){
             console.log(err);
         }

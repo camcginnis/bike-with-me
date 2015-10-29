@@ -6,18 +6,24 @@ angular.module("bikeWithMe")
             comments.create($scope.formData)
                     .then(function(response){
                       $scope.formData = {};
+                      getComments();
                     });
         };
 
-        comments.getAll()
+
+        var getComments = function(){
+          comments.getAll()
                 .then(function(response){
                   $scope.comments = response.data;
         });
+      };
+      getComments();
 
-        $scope.removeComment = function(){
-            comments.delete($scope.formData)
+        $scope.removeComment = function(id){
+            comments.delete(id)
                 .then(function(response){
                   console.log(response);
+                  getComments();
                 });
         };
 

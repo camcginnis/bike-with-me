@@ -6,15 +6,15 @@
           <label for="first_name">First Name</label>
         </div>
         <div class="input-field col s6">
-          <input id="last_name" type="text" class="validate" ng-model="formData.lastInitial">
-          <label for="last_name">Last Initial</label>
+          <input id="last_name" type="text" class="validate" ng-model="formData.lastName">
+          <label for="last_name">Last Name</label>
         </div>
       </div>
 
       <div class="row">
         <div class="input-field col s12">
-          <textarea id="textarea1" class="materialize-textarea" ng-model="formData.testimonial"></textarea>
-          <label for="textarea1">Testimonial</label>
+          <textarea id="textarea1" class="materialize-textarea" ng-model="formData.stories"></textarea>
+          <label for="textarea1">Stories</label>
         </div>
       </div>
       <button class="btn waves-effect waves-light blue" type="submit" name="action">Be Heard
@@ -23,14 +23,14 @@
 </div>
 
 
-<div class = "container" class="right" ng-repeat="comment in comments">
-      <div class="col s12 m6">
-          <div class="card grey lighten-1">
+<div class = "container">
+      <div class="col s12 m4 l8">
+          <div class="card blue-grey lighten-2" ng-repeat="comment in comments">
                 <div class="card-content white-text">
-                  <div class="message">
-                    <h5>{{ comment.firstName}} {{ comment.lastInitial }}</h5>
-                    <p> {{ comment.testimonial }}</p>
-                    <span data-id="{{comments}}"></span>
+                  <div class="center">
+                      <h5>{{ comment.firstName}} {{ comment.lastName }}</h5>
+                      <p> {{ comment.stories }}</p>
+                      <span data-id="{{comments}}"></span>
                   </div>
                 </div>
               <button type="btn waves-effect waves-red" name="button" ng-click="removeComment(comment._id)">X</button>

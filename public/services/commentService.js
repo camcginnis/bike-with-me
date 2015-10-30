@@ -28,7 +28,7 @@ angular.module("bikeWithMe").factory('comments', function($http) {
         return $http.get(baseUrl)
               .then(function(response){
                 var length = response.data.length;
-                var rand = Math.round(Math.random() * length);
+                var rand = Math.floor(Math.random() * length);
                 return response.data[rand];
               });
 

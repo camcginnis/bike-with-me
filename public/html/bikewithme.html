@@ -1,26 +1,14 @@
-<!-- <div class="image" src="../../images/Bike_Wheel.png"></div>
-
-<div class="card" ng-repeat="comment in comments">
-    <div class="col s6" class = "row">
-        <div class="well">
-          <h4>{{ comment.firstName}} {{ comment.lastInitial }}</h4>
-          <p> {{ comment.testimonial }}</p>
-          <span data-id="{{comments}}"></span>
-        </div>
-    </div>
-</div> -->
-
 <div class="card">
   <div class="card large">
       <div class="card-image waves-effect waves-block waves-light">
-        <img class="activator" src="../../images/lane.jpg">
+        <img class="activator" src="../../images/lane.jpg" ng-click="getRandom()">
       </div>
       <div class="card-content">
-        <span class="card-title activator grey-text text-darken-4">Stories<i class="material-icons right">more_vert</i></span>
+        <span class="card-title activator grey-text text-darken-4" ng-click="getRandom()">Stories<i class="material-icons right">more_vert</i></span>
       </div>
       <div class="card-reveal">
         <span class="card-title grey-text text-darken-4">Stories<i class="material-icons right">close</i></span>
-        <p><h4><strong>{{comment.firstName}} </strong></h4></p class="flow-text">{{comment.testimonial}}</p>
+        <p><h4><strong>{{comment.firstName}} {{ comment.lastName}}</strong></h4></p class="flow-text">{{comment.stories}}</p>
       </div>
     </div>
 </div>

@@ -29,8 +29,8 @@ server.get("/api/comments", function(req, res){
 server.post("/api/comments", function(req, res){
     var comment = new Comment({
       firstName: req.body.firstName,
-      lastInitial: req.body.lastInitial,
-      testimonial: req.body.testimonial
+      lastName: req.body.lastName,
+      stories: req.body.stories
     });
 
     comment.save(function(err){
@@ -56,7 +56,7 @@ server.delete("/api/comments/:id", function(req, res){
         if(err){
             console.log(err);
         }
-       res.json({message: "Comment successfully removed"});
+       res.json({message: "Gone"});
 
    });
 });
